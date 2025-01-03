@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block announce %}
+  For updates follow <strong>Nick Frichette</strong> on
+  <a rel="me" href="https://bsky.app/profile/frichetten.com">
+    <span class="twemoji bluesky">
+      {% include ".icons/fontawesome/brands/bluesky.svg" %}
+    </span>
+    <strong>Bluesky</strong>
+  </a>.
+{% endblock %}
+
+{% block content %}
+  {% if page.meta.author_name %}
+    <p>Article by {{ page.meta.author_name }}</p>
+  {% endif %}
+  {{ super() }}
+{% endblock %}
